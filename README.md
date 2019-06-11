@@ -6,11 +6,11 @@ and [docker-compose](https://docs.docker.com/compose/install/)
 
 extract wisski-env.tar.gz 
 
-$ `tar -xzvf wisski-env.tar.gz`
+`$ tar -xzvf wisski-env.tar.gz`
 
 start containers
 
-$ `docker-compose up`
+`$ docker-compose up`
 
 quit with 
 
@@ -18,4 +18,4 @@ ctrl + c
 
 and 
 
-$ `docker-compose down`
+`$ docker-compose down`

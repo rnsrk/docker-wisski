@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   drupal:
-    image: rnsrk/wisski
+    image: rnsrk/drupal-wisski
     build: 
       context: .
       dockerfile: Drupal-Dockerfile
@@ -13,14 +13,14 @@ services:
       - ./drupal-website:/var/www/html
 
   mariadb:
-    image: rnsrk/wisski-mariadb
+    image: mariadb:10.4
     environment:
       - MYSQL_ROOT_PASSWORD=TestingWissKI   
     volumes:
       - ./drupal-data:/var/lib/mysql
 
   graphdb:
-    image: rnsrk/wisski-graphdb
+    image: dhlabbasel/graphdb-free
     ports:
       - "7201:7200"
     volumes: 

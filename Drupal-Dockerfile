@@ -1,0 +1,27 @@
+FROM drupal:8.7
+
+RUN apt-get update \
+	&& apt-get install -y \
+	git \
+	unzip \
+	wget \
+	vim \
+    && rm -rf /var/lib/apt/lists/* 
+
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+	php composer-setup.php && \
+	mv composer.phar /usr/local/bin/composer && \
+	php -r "unlink('composer-setup.php');"
+
+RUN wget -O /usr/local/bin/drush https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar \
+    && chmod +x /usr/local/bin/drush 
+
+
+WORKDIR /var/www/html/themes
+
+RUN git clone --branch 8.x-1.x --single-branch --depth 1 https://git.drupal.org/sandbox/mnscholz-2807203 wisski_theme \
+	&& chown -R www-data:www-data wisski_theme
+
+WORKDIR /var/www/html
+
+COPY --chown=www-data:www-data ecrm_170309.owl /var/www/html/sites/default/files/

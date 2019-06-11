@@ -12,6 +12,10 @@ start containers
 
 `$ docker-compose up`
 
+change permissions for drupal-website
+
+`$ sudo chown -R www-data:www-data drupal-website`
+
 go to your browser and type
 
 `localhost:8081`

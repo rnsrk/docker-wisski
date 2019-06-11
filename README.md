@@ -12,13 +12,18 @@ start containers
 
 `$ docker-compose up`
 
-go to your browser
+go to your browser and type
 
 `localhost:8081`
 
-quit with 
+Webpage looks weird on the first attempt, just klick `log in`.
 
-ctrl + c
+User: wisski
+PW: wisski
+
+quit services in Terminal with 
+
+`ctrl + c`
 
 and 
 

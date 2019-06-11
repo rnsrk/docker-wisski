@@ -12,6 +12,10 @@ start containers
 
 `$ docker-compose up`
 
+go to your browser
+
+`localhost:8081`
+
 quit with 
 
 ctrl + c

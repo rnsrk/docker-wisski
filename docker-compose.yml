@@ -11,9 +11,9 @@ services:
       - ./drupal-website:/var/www/html
 
     environment:
-      VIRTUAL_HOST: 'leo-workshop.halle.tech'
-      LETSENCRYPT_HOST: 'leo-workshop.halle.tech'
-      LETSENCRYPT_EMAIL: 'felix@wohlpa.de'
+      VIRTUAL_HOST: ''
+      LETSENCRYPT_HOST: ''
+      LETSENCRYPT_EMAIL: ''
     networks:
       - default
       - proxy-network

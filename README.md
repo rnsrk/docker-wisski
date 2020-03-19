@@ -10,11 +10,11 @@ extract wisski-env.tar.gz
 
 start containers
 
-`$ docker-compose up`
+`$ docker-compose up -d`
 
 change permissions for drupal-website
 
-`$ sudo chown -R www-data:www-data drupal-website`
+`$ docker-compose run drupal chmod -R 0755 /var/www/html`
 
 go to your browser and type
 
